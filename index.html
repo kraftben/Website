@@ -22,24 +22,13 @@
 
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
         <h1>Website Coming Soon ...</h1>
-
-        <!-- Button to navigate to another page -->
         <button onclick="window.location.href = 'photos.html';">View drone photos</button>
-
         <p></p>
-
         <img src="Capital_FEB10_Sunset.jpg" alt="Capital_Sunset">
-        <!-- <img src="Kraft_Headshot3.jpg" alt="Kraft_Headshot"> -->
-
-
 
         <div id="message"></div>
 
-        <!-- JavaScript to fetch and display traffic sign message -->
         <script>
             const developerKey = '79a06ed5066c42108abf1bcf62f939af';
             const url = `https://511wi.gov/api/v2/get/messagesigns?key=${developerKey}`;
@@ -47,19 +36,23 @@
             const xhr = new XMLHttpRequest();
             xhr.open('GET', url, true);
             xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    const response = JSON.parse(xhr.responseText);
-                    if (response && response.length > 0 && response[0].Messages && response[0].Messages.length > 0) {
-                        document.getElementById('message').innerText = response[0].Messages[0];
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        const response = JSON.parse(xhr.responseText);
+                        if (response && response.length > 0 && response[0].Messages && response[0].Messages.length > 0) {
+                            document.getElementById('message').innerText = response[0].Messages[0];
+                        } else {
+                            document.getElementById('message').innerText = "No message available.";
+                        }
                     } else {
-                        document.getElementById('message').innerText = "No message available.";
+                        console.error('Error fetching data:', xhr.statusText);
                     }
                 }
             };
+            xhr.onerror = function () {
+                console.error('Request failed');
+            };
             xhr.send();
         </script>
-
-
-        <script src="" async defer></script>
     </body>
 </html>

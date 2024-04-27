@@ -34,7 +34,31 @@
 
         <img src="Capital_FEB10_Sunset.jpg" alt="Capital_Sunset">
         <!-- <img src="Kraft_Headshot3.jpg" alt="Kraft_Headshot"> -->
-        
+
+
+
+        <div id="message"></div>
+
+        <!-- JavaScript to fetch and display traffic sign message -->
+        <script>
+            const developerKey = '79a06ed5066c42108abf1bcf62f939af';
+            const url = `https://511wi.gov/api/v2/get/messagesigns?key=${developerKey}`;
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const response = JSON.parse(xhr.responseText);
+                    if (response && response.length > 0 && response[0].Messages && response[0].Messages.length > 0) {
+                        document.getElementById('message').innerText = response[0].Messages[0];
+                    } else {
+                        document.getElementById('message').innerText = "No message available.";
+                    }
+                }
+            };
+            xhr.send();
+        </script>
+
 
         <script src="" async defer></script>
     </body>

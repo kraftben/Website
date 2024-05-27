@@ -12,13 +12,13 @@ const sections = [
   {
     id: 'portfolio',
     title: 'Portfolio',
-    image: 'path-to-another-photo.jpg',
+    image: 'DronePhotos\Lakefront.jpg',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis quam at libero tristique, a venenatis eros lacinia. Donec ut nisl quis lacus cursus bibendum. Phasellus tincidunt orci vitae quam pretium, at mollis metus eleifend.'
   },
   {
     id: 'contact',
     title: 'Contact',
-    image: 'path-to-another-photo.jpg',
+    image: 'DronePhotos\DJI_0268.jpg',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis quam at libero tristique, a venenatis eros lacinia. Donec ut nisl quis lacus cursus bibendum. Phasellus tincidunt orci vitae quam pretium, at mollis metus eleifend.'
   }
 ];

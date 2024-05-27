@@ -6,7 +6,7 @@ const sections = [
   {
     id: 'about',
     title: 'About Me',
-    image: 'path-to-your-photo.jpg',
+    image: 'DronePhotos\Hoan Bridge.jpg',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis quam at libero tristique, a venenatis eros lacinia. Donec ut nisl quis lacus cursus bibendum. Phasellus tincidunt orci vitae quam pretium, at mollis metus eleifend.'
   },
   {
@@ -58,7 +58,7 @@ function App() {
     <>
       <header>
         <div className="container">
-          <img src="path-to-your-photo.jpg" alt="Your Photo" className="profile-photo" />
+          <img src="Kraft_Headshot3.jpg" alt="Your Photo" className="profile-photo" />
           <h1>Your Name</h1>
           <p className="subtitle">Your Subtitle or Tagline</p>
         </div>

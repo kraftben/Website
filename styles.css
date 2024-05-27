@@ -1,4 +1,103 @@
 body {
-    background-color: #14213D;
-    color: white; /* Optional: Change text color to white for better visibility */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1A237E; /* Navy blue background */
+    color: #FFFFFF; /* White text */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #0D1B4C; /* Darker navy blue */
+    color: #FFFFFF; /* White text */
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #B8860B 3px solid; /* Brass color accent */
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #B8860B; /* Brass color */
+}
+
+nav {
+    background: #283593; /* Navy blue */
+    color: #FFFFFF; /* White text */
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #FFFFFF; /* White text */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px 0;
+}
+
+main .container {
+    background: #1A237E; /* Navy blue background */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+main h2 {
+    color: #B8860B; /* Brass color */
+}
+
+.content-photo {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border: 2px solid #B8860B; /* Brass color border */
+}
+
+footer {
+    background: #0D1B4C; /* Darker navy blue */
+    color: #FFFFFF; /* White text */
+    text-align: center;
+    padding: 10px 0;
+    border-top: #B8860B 3px solid; /* Brass color accent */
+}
+
+footer p {
+    margin: 0;
 }
